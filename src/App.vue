@@ -1,26 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <br>
+    <h1>CIDWA</h1>
+    <h2>Actividad 1 - Tabla</h2>
+    <br>
+    <table-component :headers="tableData" :data="tableData"/>
+    
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TableComponent from './components/TableComponent.vue';
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    TableComponent,
+  },
+  data() {
+    return {
+      tableData: [
+        { nombre: 'Sofia', edad: 27, correo: 'frida@example.com', direccion:'Av Insurgentes 2000, CDMX' },
+        { nombre: 'Juan', edad: 30, correo: 'juan@example.com', direccion: 'San Diego, California' },
+        { nombre: 'Pedro', edad: 25, correo: 'pedro@example.com',direccion: 'Bogota, Colombia' },
+        { nombre: 'Laura', edad: 22, correo: 'laura@example.com', direccion: 'Buenos Aires, Argentina'},
+      ],
+    };
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
