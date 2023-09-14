@@ -1,13 +1,11 @@
 <template>
   <div class="table-responsive">
     <table class="table table-striped">
-      <!-- Table headers -->
       <thead>
         <tr>
           <th v-for="(item, index) in headers[0]" :key="index">{{ index.toUpperCase() }}</th>
         </tr>
       </thead>
-      <!-- Table rows -->
       <tbody>
         <tr v-for="(item, index) in data" :key="index">
           <td v-for="(value, key) in item" :key="key">{{ value }}</td>

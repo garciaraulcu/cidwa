@@ -1,6 +1,6 @@
 <template>
     <div>
-        <table-component :headers="data" :data="data"/> 
+        <table-component :headers="data" :data="data"/>
     </div>
 </template>
 
@@ -9,10 +9,10 @@ import axios from 'axios'
 import TableComponent from './TableComponent.vue'
 
 export default {
-  components: { TableComponent },
+  components: {TableComponent },
     data() {
         return {
-            data: null,
+            data: [],
         }
     },
     mounted() {
